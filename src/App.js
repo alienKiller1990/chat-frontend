@@ -1,10 +1,12 @@
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-        hello world
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div className="wrapper">
+        
+      </div>
+    )
+  }
 }
 
-export default App;
