@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import { Auth } from 'pages';
+import { Route } from 'react-router';
+
+import { Auth, Home } from 'pages';
 
 export default class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <Auth />
-
+        <Route path={["/", "/login", "/register"]} component={Auth} exact />
+        <Route path="/im" component={Home} exact />
       </div>
     )
   }

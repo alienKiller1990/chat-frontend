@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Button, Block } from 'components';
 import { Form, Input } from 'antd';
-import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons';
+import { UserOutlined, LockOutlined, MailOutlined, InfoCircleTwoTone } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 class RegisterForm extends Component {
     render() {
+        const success = false;
         return (
             <div>
                 <div className="auth__top">
@@ -13,37 +14,47 @@ class RegisterForm extends Component {
                     <p>Для входа в чат, вам нужно зарегистрироваться</p>
                 </div>
                 <Block>
-                    <Form className="login-form">
-                        <Form.Item validateStatus="success" name="username" hasFeedback>
-                            <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Ваше имя" size="large" />
-                        </Form.Item>
-                        <Form.Item validateStatus="success" name="username" hasFeedback>
-                            <Input prefix={<MailOutlined />} placeholder="E-mail" size="large" />
-                        </Form.Item>
-                        <Form.Item name="password">
-                            <Input
-                                prefix={<LockOutlined className="site-form-item-icon" />}
-                                type="password"
-                                placeholder="Пароль"
-                                size="large"
-                            />
-                        </Form.Item>
-                        <Form.Item name="password">
-                            <Input
-                                prefix={<LockOutlined className="site-form-item-icon" />}
-                                type="password"
-                                placeholder="Повторите пароль"
-                                size="large"
-                            />
-                        </Form.Item>
+                    {!success ? (
+                        <Form className="login-form">
+                            <Form.Item validateStatus="success" name="username" hasFeedback>
+                                <Input prefix={<UserOutlined className="site-form-item-icon" style={{color: '#ccc'}}/>} placeholder="Ваше имя" size="large" />
+                            </Form.Item>
+                            <Form.Item validateStatus="success" name="username" hasFeedback>
+                                <Input prefix={<MailOutlined style={{ color: '#ccc' }}/>} placeholder="E-mail" size="large" />
+                            </Form.Item>
+                            <Form.Item name="password">
+                                <Input
+                                    prefix={<LockOutlined className="site-form-item-icon" style={{ color: '#ccc' }}/>}
+                                    type="password"
+                                    placeholder="Пароль"
+                                    size="large"
+                                />
+                            </Form.Item>
+                            <Form.Item name="password">
+                                <Input
+                                    prefix={<LockOutlined className="site-form-item-icon" style={{ color: '#ccc' }}/>}
+                                    type="password"
+                                    placeholder="Повторите пароль"
+                                    size="large"
+                                />
+                            </Form.Item>
 
-                        <Form.Item>
-                            <Button type="primary" htmlType="submit" size="large">
-                                Зарегистрироваться
-                            </Button>
-                        </Form.Item>
-                        <Link className="auth__register-link" to="/login">Войти в аккаунт</Link>
-                    </Form>
+                            <Form.Item>
+                                <Button type="primary" htmlType="submit" size="large">
+                                    Зарегистрироваться
+                                </Button>
+                            </Form.Item>
+                            <Link className="auth__register-link" to="/login">Войти в аккаунт</Link>
+                        </Form>
+                    ) : (
+                        <div className="auth__success-block">
+                            <div>
+                                    <InfoCircleTwoTone style={{ fontSize: '48px'}}/>
+                            </div>
+                            <h2>Потвердите свой аккаунт</h2>
+                            <p>На вашу почту отправлено письмо с ссылкой на потверждение аккаунта</p>
+                        </div>
+                    )}
                 </Block>
             </div>
         )

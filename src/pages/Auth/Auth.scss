@@ -29,6 +29,26 @@
         letter-spacing: 0.1px;
     }
 
+    &__success-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 270px;
+        text-align: center;
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.1px;
+            opacity: 0.5;
+        }
+    }
+
     .button {
         width: 100%;
         text-transform: uppercase;

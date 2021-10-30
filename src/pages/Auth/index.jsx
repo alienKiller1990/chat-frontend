@@ -9,7 +9,7 @@ const index = () => {
         <section className="auth">
             <div className="auth__content">
                 <Route path={["/", "/login"]} component={LoginForm} exact/>
-                <Route path="/register" component={RegisterForm} />
+                <Route path="/register" component={RegisterForm}/>
             </div>
         </section>
     )

@@ -15,11 +15,11 @@ class LoginForm extends Component {
                 <Block>
                     <Form className="login-form">
                         <Form.Item validateStatus="success" name="username" hasFeedback>
-                            <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" size="large" />
+                            <Input prefix={<UserOutlined className="site-form-item-icon" style={{ color: '#ccc' }}/>} placeholder="Username" size="large" />
                         </Form.Item>
                         <Form.Item name="password">
                             <Input
-                                prefix={<LockOutlined className="site-form-item-icon" />}
+                                prefix={<LockOutlined className="site-form-item-icon" style={{ color: '#ccc' }}/>}
                                 type="password"
                                 placeholder="Password"
                                 size="large"
