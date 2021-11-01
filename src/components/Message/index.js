@@ -29,17 +29,18 @@ const Message = ({ avatar, user, text, date, isMe, isReaded, attachments }) => (
                 <div className="message__bubble">
                     <p className="message__text">{text}</p>
                 </div>
+                <div className="message__attachments">
+                    {
+                        attachments && attachments.map(item => (
+                            <div className="message__attachments-item">
+                                <img src={item.url} alt={item.filename} />
+                            </div>
+                        ))
+                    }
+                </div>
                 <span className="message__date">{formatDistanceToNow(date, { addSuffix: true, locale: ruLocale })}</span>
             </div>
-            <div className="message__attachments">
-                {
-                    attachments && attachments.map(item => (
-                        <div className="message__attachments-item">
-                            <img src={item.url} alt={item.filename} />
-                        </div>
-                    ))
-                }
-            </div>
+
         </div>
     </div>
 )
