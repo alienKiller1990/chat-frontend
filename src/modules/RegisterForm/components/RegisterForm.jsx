@@ -15,7 +15,7 @@ const RegisterForm = props => {
         handleBlur,
         handleSubmit,
     } = props;
-    
+
     return (
         <div>
             <div className="auth__top">
@@ -25,21 +25,47 @@ const RegisterForm = props => {
             <Block>
                 {!success ? (
                     <Form onSubmit={handleSubmit} className="login-form">
+                        
+                        <Form.Item
+                            validateStatus={
+                                !touched.email ? '' : errors.email ? 'error' : 'success'
+                            }
+                            name="email"
+                            hasFeedback >
+                            <Input
+                                id="email"
+                                prefix={<MailOutlined style={{ color: '#ccc' }} />}
+                                placeholder="E-mail"
+                                size="large"
+                                onChange={handleChange}
+                                onBlur={handleBlur} />
+                        </Form.Item>
+
+
                         <Form.Item validateStatus="success" name="username" hasFeedback>
                             <Input prefix={<UserOutlined className="site-form-item-icon" style={{ color: '#ccc' }} />} placeholder="Ваше имя" size="large" />
                         </Form.Item>
-                        <Form.Item validateStatus="success" name="email" hasFeedback>
-                            <Input prefix={<MailOutlined style={{ color: '#ccc' }} />} placeholder="E-mail" size="large" />
-                        </Form.Item>
-                        <Form.Item name="password">
+
+
+                        <Form.Item
+                            hasFeedback
+                            name="password"
+                            validateStatus={
+                                !touched.password ? '' : errors.password ? 'error' : 'success'
+                            }>
                             <Input
+                                id="password"
                                 prefix={<LockOutlined className="site-form-item-icon" style={{ color: '#ccc' }} />}
                                 type="password"
                                 placeholder="Пароль"
                                 size="large"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
                             />
                         </Form.Item>
-                        <Form.Item name="password">
+
+
+                        <Form.Item >
                             <Input
                                 prefix={<LockOutlined className="site-form-item-icon" style={{ color: '#ccc' }} />}
                                 type="password"
@@ -49,7 +75,7 @@ const RegisterForm = props => {
                         </Form.Item>
 
                         <Form.Item>
-                            <Button type="primary" htmlType="submit" size="large">
+                            <Button onClick={handleSubmit} type="primary" htmlType="submit" size="large">
                                 Зарегистрироваться
                             </Button>
                         </Form.Item>
