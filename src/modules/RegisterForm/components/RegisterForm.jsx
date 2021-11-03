@@ -25,11 +25,10 @@ const RegisterForm = props => {
             <Block>
                 {!success ? (
                     <Form onSubmit={handleSubmit} className="login-form">
-                        
+
                         <Form.Item
-                            validateStatus={
-                                !touched.email ? '' : errors.email ? 'error' : 'success'
-                            }
+                            validateStatus={!touched.email ? '' : errors.email ? 'error' : 'success'}
+                            help={!touched.email ? '' : errors.email}
                             name="email"
                             hasFeedback >
                             <Input
@@ -42,17 +41,26 @@ const RegisterForm = props => {
                         </Form.Item>
 
 
-                        <Form.Item validateStatus="success" name="username" hasFeedback>
-                            <Input prefix={<UserOutlined className="site-form-item-icon" style={{ color: '#ccc' }} />} placeholder="Ваше имя" size="large" />
+                        <Form.Item
+                            name="username"
+                            hasFeedback
+                            validateStatus={!touched.name ? '' : errors.name ? 'error' : 'success'}
+                            help={!touched.name ? '' : errors.name}>
+                            <Input
+                                id="name"
+                                prefix={<UserOutlined className="site-form-item-icon" style={{ color: '#ccc' }} />}
+                                placeholder="Ваше имя"
+                                size="large" 
+                                onChange={handleChange}
+                                onBlur={handleBlur} />
                         </Form.Item>
 
 
                         <Form.Item
                             hasFeedback
                             name="password"
-                            validateStatus={
-                                !touched.password ? '' : errors.password ? 'error' : 'success'
-                            }>
+                            validateStatus={!touched.password ? '' : errors.password ? 'error' : 'success'}
+                            help={!touched.password ? '' : errors.password}>
                             <Input
                                 id="password"
                                 prefix={<LockOutlined className="site-form-item-icon" style={{ color: '#ccc' }} />}
