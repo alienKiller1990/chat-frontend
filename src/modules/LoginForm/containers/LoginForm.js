@@ -3,12 +3,15 @@ import LoginForm from '../components/LoginForm';
 import validateForm from 'utils/validate'
 
 export default withFormik({
+    enableReinitialize: true,
+    mapPropsToValues: () => ({
+        email: '',
+        password: ''
+    }),
     validate: values => {
         const errors = {};
 
-        const validate = validateForm({ isAuth: true })
-
-        Object.keys(values).forEach(key => validate[key] && validate[key](errors, values[key]));
+        validateForm({ isAuth: false, values, errors });
 
         return errors;
     },

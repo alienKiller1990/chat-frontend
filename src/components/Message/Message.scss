@@ -6,35 +6,32 @@
     max-width: 450px;
     margin-bottom: 15px;
 
-    &__img{
+    &__img {
         margin-left: 15px;
         margin-bottom: 25px;
         order: 1;
     }
 
     &__avatar {
-        margin-bottom: 23px;
+        margin-bottom: 5px;
 
         img {
             border-radius: 50%;
             width: 40px;
             height: 40px;
-            margin-right: 15px;
-            // margin-bottom: 20px;
+            margin-right: 13px;
         }
     }
 
-    // &__content{
-    //     display: flex;
-    // }
-
-    &__attachments{
+    &__attachments {
         display: flex;
         margin-bottom: 5px;
-        &-item{
+
+        &-item {
             margin-right: 5px;
             cursor: pointer;
-            img{
+
+            img {
                 border-radius: 8px;
                 width: 45px;
                 height: 45px;
@@ -68,28 +65,68 @@
         flex-direction: row-reverse;
         align-items: flex-end;
         margin-left: auto;
-        
+
         .message__avatar {
             margin-left: 15px;
 
-            img{
+            img {
                 margin-right: 0;
             }
         }
 
-        .message__bubble{
+        .message__bubble {
             color: #000;
             background-color: #fff;
             border-radius: 12px 12px 0 12px;
         }
 
-        .message__date{
+        .message__date {
             text-align: right;
         }
 
-        .message__img{
+        .message__img {
             margin-right: 15px;
         }
     }
 
+    &__typing {
+        span+span {
+            margin-left: 8px;
+        }
+
+        span {
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background: rgb(170, 160, 160);
+            display: inline-block;
+            opacity: 0.4;
+
+            @for $i from 1 through 3 {
+                &:nth-of-type(#{$i}) {
+                    animation: 1s blink infinite ($i * .3333s);
+                }
+            }
+
+            @keyframes blink {
+                50% {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &--is-typing {
+        .message__bubble {
+            background: rgb(216, 217, 235);
+        }
+    }
+    &--image{
+        .message__attachments {
+            img{
+                height: 150px;
+                width: 150px;
+            }
+        }
+    }
 }

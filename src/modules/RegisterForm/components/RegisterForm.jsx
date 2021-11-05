@@ -3,12 +3,13 @@ import { Button, Block } from 'components';
 import { Form, Input } from 'antd';
 import { UserOutlined, LockOutlined, MailOutlined, InfoCircleTwoTone } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+import { validateField } from 'utils/helpers';
+
 
 const success = false;
 
 const RegisterForm = props => {
     const {
-        values,
         touched,
         errors,
         handleChange,
@@ -27,8 +28,8 @@ const RegisterForm = props => {
                     <Form onSubmit={handleSubmit} className="login-form">
 
                         <Form.Item
-                            validateStatus={!touched.email ? '' : errors.email ? 'error' : 'success'}
-                            help={!touched.email ? '' : errors.email}
+                            validateStatus={validateField('email', touched, errors)}
+                            help={!touched.email ? null : errors.email}
                             name="email"
                             hasFeedback >
                             <Input
@@ -45,7 +46,7 @@ const RegisterForm = props => {
                             name="username"
                             hasFeedback
                             validateStatus={!touched.name ? '' : errors.name ? 'error' : 'success'}
-                            help={!touched.name ? '' : errors.name}>
+                            help={!touched.name ? null : errors.name}>
                             <Input
                                 id="name"
                                 prefix={<UserOutlined className="site-form-item-icon" style={{ color: '#ccc' }} />}
@@ -58,9 +59,8 @@ const RegisterForm = props => {
 
                         <Form.Item
                             hasFeedback
-                            name="password"
-                            validateStatus={!touched.password ? '' : errors.password ? 'error' : 'success'}
-                            help={!touched.password ? '' : errors.password}>
+                            validateStatus={validateField('email', touched, errors)}
+                            help={!touched.password ? null : errors.password}>
                             <Input
                                 id="password"
                                 prefix={<LockOutlined className="site-form-item-icon" style={{ color: '#ccc' }} />}
