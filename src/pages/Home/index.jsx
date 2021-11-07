@@ -1,49 +1,41 @@
 import React from 'react';
-import { DialogItem } from 'components';
+import { Dialogs, Message } from 'components';
 
-import './Home.scss'
+import './Home.scss';
+
 
 const Home = () => (
     <section className="home">
-        <div className="dialogs">
-            <DialogItem user={{
-                fullname:'Федор Достоевский',
-                isOnline: true
-            }}
-            unreaded={0}
-            />
-            <DialogItem user={{
-                fullname:'Федор Достоевский',
-                isOnline: true
-            }}
-            unreaded={0}
-            />
-            <DialogItem user={{
-                fullname:'Федор Достоевский',
-                isOnline: true
-            }}
-            unreaded={0}
-            />
-            <DialogItem user={{
-                fullname:'Федор Достоевский',
-                isOnline: true
-            }}
-            unreaded={0}
-            />
-        </div>
-        {/* <Dialogs items={[
+        <Dialogs items={[
             {
+                _id: Math.random(),
+                text: 'Мы все свидетельствуем.eee!',
+                isReaded: false,
+                created_at: new Date(),
                 user: {
+                    _id: 1,
                     fullname: 'Федор Достоевский',
+                    avatar: "https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
+                },
+            },
+            {
+                _id: Math.random(),
+                text: 'Здорова!как дела?aaaaaaaaaaaaaaaaaa',
+                isReaded: true,
+                created_at: new Date() - 100000000,
+                user: {
+                    _id: 1,
+                    fullname: 'Fred Derst',
                     avatar: null
                 },
-                message: {
-                    text: 'Мы все свидетельствуем',
-                    isReaded: false,
-                    created_at: new Date()
-                }
-            }
-        ]}/> */}
+            },
+        ]} />
+        <Message
+            avatar="https://yt3.ggpht.com/ytc/AKedOLQlCDlun57Qr6u6DY-yGM3H7vfXsAo6jgXC7Hvt=s176-c-k-c0x00ffffff-no-rj-mo"
+            date={new Date().getTime()}
+            audio="https://notificationsounds.com/storage/sounds/file-sounds-1150-pristine.mp3"
+
+        />
         {/* <Message
             avatar="https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
             text="Здорово друг! Я начал создавать чат.Это очень интересно и увлекательно."
@@ -58,14 +50,6 @@ const Home = () => (
                     url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDJqRCCS07pUNCflqYryDyfsk8pQYEn5lk0rrZnIz7E3vnByLys_QEpIFuXAeY5gkwiYk&usqp=CAU'
                 }
             ]}
-        />
-        <Message
-            avatar="https://yt3.ggpht.com/ytc/AKedOLQlCDlun57Qr6u6DY-yGM3H7vfXsAo6jgXC7Hvt=s176-c-k-c0x00ffffff-no-rj-mo"
-            text="Здорово! Круто мужик! Красава!"
-            date={new Date()}
-            isMe={true}
-            isReaded={true}
-
         />
         <Message
             avatar="https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
