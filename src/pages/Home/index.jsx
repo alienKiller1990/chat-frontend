@@ -13,18 +13,18 @@ const Home = () => (
                 isReaded: false,
                 created_at: new Date(),
                 user: {
-                    _id: 1,
+                    _id: '49f68a5c8493ec2c0bf489821c21fc3b',
                     fullname: 'Федор Достоевский',
                     avatar: "https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
                 },
             },
             {
-                _id: Math.random(),
+                _id: '49f68a5c8493ec2c0bf489821c21fc3b',
                 text: 'Здорова!как дела?aaaaaaaaaaaaaaaaaa',
                 isReaded: true,
                 created_at: new Date() - 100000000,
                 user: {
-                    _id: 1,
+                    _id: 'ag068a5c8493ec2c0bf489821c21fc3b',
                     fullname: 'Fred Derst',
                     avatar: null
                 },
@@ -35,6 +35,10 @@ const Home = () => (
             date={new Date().getTime()}
             audio="https://notificationsounds.com/storage/sounds/file-sounds-1150-pristine.mp3"
 
+        />
+        <Message
+            avatar="https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
+            isTyping
         />
         {/* <Message
             avatar="https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
@@ -60,10 +64,7 @@ const Home = () => (
                 },
             ]}
         />
-        <Message
-            avatar="https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
-            isTyping
-        /> */}
+                    */}
     </section>
 )
 

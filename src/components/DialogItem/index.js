@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { format } from 'date-fns/esm';
 import { isToday } from 'date-fns/esm';
 
-import { IconReaded } from '../';
+import { IconReaded, Avatar } from '../';
 
 
 import './DialogItem.scss';
@@ -16,23 +16,12 @@ const getMessageTime = created_at => {
     }
 }
 
-const getAvatar = avatar => {
-    if (avatar) {
-        return (
-            <img src="https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo" alt="" />
-        );
-    } else {
-        //make avatar
-    }
-}
 
 const DialogItem = ({ user, created_at, text, unreaded, isMe }) => {
     return (
         <div className={classNames('dialogs__item', { 'dialogs__item--online': user.isOnline })}>
             <div className="dialogs__item-avatar">
-                {
-                    getAvatar(user.avatar)
-                }
+                <Avatar user={user}/>
             </div>
             <div className="dialogs__item-info">
                 <div className="dialogs__item-info-top">
