@@ -6,7 +6,8 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
     &__sidebar {
-        width: 320px;
+        width: 330px;
+        border-right: 1px solid rgb(231, 229, 229);
 
         &-header {
             padding: 20px;
@@ -22,16 +23,23 @@
         }
 
         &-search {
-            padding: 0 0 20px 20px;
+            padding: 0 20px 20px 20px;
 
             button {
                 border: none;
                 background-color: rgb(231, 229, 229);
-                height: 32 px;
+                height: 30px;
             }
 
             input {
+                display: block;
                 background-color: rgb(231, 229, 229);
+            }
+        }
+
+        &-dialogs{
+            .dialogs{
+                padding: 0 20px;
             }
         }
     }
@@ -44,6 +52,9 @@
 .ant-input {
     border: none;
 }
-.ant-input-group-wrapper{
-    border: 1px solid #000;
+
+.ant-input-search>.ant-input-group>.ant-input-group-addon:last-child {
+    left: 0;
 }
+
+
