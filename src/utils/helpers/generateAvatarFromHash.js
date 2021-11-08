@@ -11,9 +11,14 @@ export default (hash) => {
         .substr(0, 3)
         .split('')
         .map(char => getCorrectIndex(char.charCodeAt(0)));
-        return {
-            color: tinycolor({ r, g, b }).toHexString(),
-            colorLighten: tinycolor({ r, g, b }).lighten(50).toHexString()
-            
+    return {
+        color:
+            tinycolor({ r, g, b })
+                .toHexString(),
+        colorLighten:
+            tinycolor({ r, g, b })
+                .lighten(50)
+                .toHexString()
+
     };
 }
