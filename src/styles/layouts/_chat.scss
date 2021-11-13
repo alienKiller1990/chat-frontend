@@ -37,15 +37,30 @@
             }
         }
 
-        &-dialogs{
-            .dialogs{
+        &-dialogs {
+            .dialogs {
                 padding: 0 20px;
+                margin: 0;
+
+                &__item {
+                    cursor: pointer;
+                    padding: 10px 0;
+                    margin-bottom: 0;
+                    transition: background-color .1s ease-in-out;
+
+                    &:hover {
+                        background-color: rgb(211, 204, 204);
+                    }
+                }
             }
         }
+
+        // dialogs__item
     }
 
     &__dialog {
         flex: 1;
+        // background-color: green;
     }
 }
 
@@ -56,5 +71,3 @@
 .ant-input-search>.ant-input-group>.ant-input-group-addon:last-child {
     left: 0;
 }
-
-

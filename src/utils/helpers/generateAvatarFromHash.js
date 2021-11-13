@@ -2,9 +2,6 @@ import randomColor from 'randomcolor';
 import tinycolor from 'tinycolor2';
 
 
-// const getCorrectIndex = number => {
-//     return number > 255 ? 255 : number < 0 ? 0 : number;
-// }
 
 const getSumofNumber = str => {
     return [...str].reduce((accum, item) => accum + item.charCodeAt(),0)
