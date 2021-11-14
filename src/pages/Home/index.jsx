@@ -1,13 +1,15 @@
 import React from 'react';
 import { Dialogs, Message } from 'components';
 import { Input } from 'antd';
-import { TeamOutlined, FormOutlined, EllipsisOutlined } from '@ant-design/icons';
+import { TeamOutlined, FormOutlined, EllipsisOutlined, SearchOutlined } from '@ant-design/icons';
 
 import './Home.scss';
 
 
 const Home = () => {
-    const { Search } = Input;
+    const change = (e) => {
+        console.log(e.target.value)
+    }
     return (
         <section className="home">
             <div className="chat">
@@ -24,7 +26,8 @@ const Home = () => {
                     </div>
 
                     <div className="chat__sidebar-search">
-                        <Search placeholder="Поиск среди контактов" />
+                        <Input onFocus={change} placeholder="Поиск среди контактов" />
+                        {<SearchOutlined />}
                     </div>
                     <div className="chat__sidebar-dialogs">
                         <Dialogs items={[
@@ -34,6 +37,7 @@ const Home = () => {
                                     "text": "Fugiat veniam anim amet sint laborum eiusmod sint labore tempor. Enim officia quis labore excepteur veniam dolor sint incididunt ad. Est Lorem incididunt ut adipisicing. Sint consequat non deserunt eiusmod eu reprehenderit ut tempor. Laboris anim elit consequat nostrud ut ea ex tempor magna aute duis.",
                                     "created_at": "Fri Jul 12 1996 16:16:14 GMT+0400 (Москва, летнее время)",
                                     "unreaded" : 10,
+                                    "isOnline" : true,
                                     "user": {
                                         "_id": "61D97542B4E0E41A1EAAD42823F0B48B",
                                         "fullname": "Vargas Blanchard",
@@ -71,36 +75,9 @@ const Home = () => {
                                         "avatar": null
                                     }
                                 },
-                                {
-                                    "_id": "D68070DFAF86D2C0D5675651A762BBC5",
-                                    "text": "Reprehenderit velit duis sint minim labore. Nulla excepteur aute magna ea aliqua id sit nulla duis. Est aliquip aliqua sunt adipisicing culpa. Dolore deserunt excepteur nisi sunt deserunt ullamco mollit ad laborum aliqua sunt. Commodo occaecat Lorem nostrud Lorem sint.",
-                                    "created_at": "Sat Mar 23 2019 18:32:30 GMT+0300 (Москва, стандартное время)",
-                                    "user": {
-                                        "_id": "D68070DFAF86D2C0D5675651A762BBC5",
-                                        "fullname": "Buckley Love",
-                                        "avatar": null
-                                    }
-                                },
-                                {
-                                    "_id": "E0931596D327F954DD23AFA41C45E480",
-                                    "text": "In sunt consequat nostrud laborum incididunt commodo anim incididunt Lorem veniam magna ea. Minim laborum ullamco aliqua ex aliqua. Exercitation do ex nostrud mollit velit elit. Culpa laboris aute exercitation est proident fugiat ad. Lorem eu et ex excepteur commodo labore pariatur reprehenderit.",
-                                    "created_at": "Mon Aug 16 1993 14:45:52 GMT+0400 (Москва, летнее время)",
-                                    "user": {
-                                        "_id": "E0931596D327F954DD23AFA41C45E480",
-                                        "fullname": "Randall Young",
-                                        "avatar": null
-                                    }
-                                },
-                                {
-                                    "_id": "47F72972AE525735B391329C56FFAD1E",
-                                    "text": "Duis Lorem id et est reprehenderit aliqua consequat adipisicing anim. Sint amet adipisicing amet esse cillum adipisicing mollit minim amet esse. Esse adipisicing culpa ut Lorem dolore cillum id laborum commodo. Velit excepteur ea esse ut ipsum tempor eu veniam in. Sunt sint in laboris commodo.",
-                                    "created_at": "Mon Jul 31 1978 18:11:37 GMT+0300 (Москва, стандартное время)",
-                                    "user": {
-                                        "_id": "47F72972AE525735B391329C56FFAD1E",
-                                        "fullname": "Merle Wolf",
-                                        "avatar": null
-                                    }
-                                },
+                                
+                                
+                                
                                 {
                                     "_id": "3EB3F0DC8B90552606855CF61F511141",
                                     "text": "Voluptate et eu et occaecat Lorem dolore laborum adipisicing adipisicing aliquip non labore incididunt. Consequat minim pariatur incididunt commodo pariatur dolor reprehenderit. Nulla proident elit mollit magna deserunt non labore est Lorem. Do fugiat aliquip commodo ex tempor qui nostrud. Reprehenderit duis ad occaecat ad cillum irure laborum exercitation id minim.",
@@ -111,16 +88,7 @@ const Home = () => {
                                         "avatar": null
                                     }
                                 },
-                                {
-                                    "_id": "6189573bd78f064109873f85",
-                                    "text": "Velit magna officia adipisicing sunt elit excepteur minim id et ut magna minim officia. Dolor tempor in aliqua magna. Do ad exercitation tempor officia anim id. Non magna ex voluptate est officia duis magna fugiat sit dolore ex. Mollit officia laborum pariatur sit.",
-                                    "created_at": "Sun Mar 28 1976 08:57:08 GMT+0300 (Москва, стандартное время)",
-                                    "user": {
-                                        "_id": "6189573b170a4da2cccf76f7",
-                                        "fullname": "Louella Welch",
-                                        "avatar": null
-                                    }
-                                },
+                               
                                 {
                                     "_id": "6189573b5adf6cf2337ca374",
                                     "text": "In laborum ad sunt incididunt cillum sit aute labore ullamco incididunt fugiat anim consectetur. Sunt minim culpa sunt ea. Magna mollit consectetur id voluptate amet duis esse dolore incididunt. Consectetur elit consequat est esse ea irure irure esse culpa ullamco veniam consequat ea eiusmod. Aute eu nulla ex cupidatat exercitation ullamco non.",
@@ -189,48 +157,52 @@ const Home = () => {
 
                         <EllipsisOutlined />
                     </div>
+                    <div className="chat__dialog-messages">
+                        <Message
+                            avatar="https://yt3.ggpht.com/ytc/AKedOLQlCDlun57Qr6u6DY-yGM3H7vfXsAo6jgXC7Hvt=s176-c-k-c0x00ffffff-no-rj-mo"
+                            date={new Date().getTime()}
+                            audio="https://notificationsounds.com/storage/sounds/file-sounds-1150-pristine.mp3"
+
+                        />
+
+                        <Message
+                            avatar="https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
+                            text="Здорово друг! Я начал создавать чат.Это очень интересно и увлекательно."
+                            date={new Date()}
+                            attachments={[
+                                {
+                                    filename: 'image.jpg',
+                                    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDJqRCCS07pUNCflqYryDyfsk8pQYEn5lk0rrZnIz7E3vnByLys_QEpIFuXAeY5gkwiYk&usqp=CAU'
+                                },
+                                {
+                                    filename: 'image.jpg',
+                                    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDJqRCCS07pUNCflqYryDyfsk8pQYEn5lk0rrZnIz7E3vnByLys_QEpIFuXAeY5gkwiYk&usqp=CAU'
+                                }
+                            ]}
+                        />
+                        <Message
+                            avatar="https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
+                            attachments={[
+                                {
+                                    filename: 'image.jpg',
+                                    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDJqRCCS07pUNCflqYryDyfsk8pQYEn5lk0rrZnIz7E3vnByLys_QEpIFuXAeY5gkwiYk&usqp=CAU'
+                                },
+                            ]}
+                        />
+                        <Message
+                            avatar="https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
+                            isTyping
+                        />
+
+
+                    </div>
                 </div>
             </div>
         </section>
     )
 }
 export default Home
-        /*
-<Message
-avatar="https://yt3.ggpht.com/ytc/AKedOLQlCDlun57Qr6u6DY-yGM3H7vfXsAo6jgXC7Hvt=s176-c-k-c0x00ffffff-no-rj-mo"
-date={new Date().getTime()}
-audio="https://notificationsounds.com/storage/sounds/file-sounds-1150-pristine.mp3"
-
-/>
-<Message
-avatar="https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
-isTyping
-/> */
-/* <Message
-            avatar="https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
-            text="Здорово друг! Я начал создавать чат.Это очень интересно и увлекательно."
-            date={new Date()}
-            attachments={[
-                {
-                    filename: 'image.jpg',
-                    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDJqRCCS07pUNCflqYryDyfsk8pQYEn5lk0rrZnIz7E3vnByLys_QEpIFuXAeY5gkwiYk&usqp=CAU'
-                },
-                {
-                    filename: 'image.jpg',
-                    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDJqRCCS07pUNCflqYryDyfsk8pQYEn5lk0rrZnIz7E3vnByLys_QEpIFuXAeY5gkwiYk&usqp=CAU'
-                }
-            ]}
-        />
-        <Message
-            avatar="https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
-            attachments={[
-                {
-                    filename: 'image.jpg',
-                    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDJqRCCS07pUNCflqYryDyfsk8pQYEn5lk0rrZnIz7E3vnByLys_QEpIFuXAeY5gkwiYk&usqp=CAU'
-                },
-            ]}
-        />
-        */
+        
 
 
 

@@ -17,7 +17,7 @@ const getMessageTime = created_at => {
 }
 
 
-const DialogItem = ({ user, created_at, text, unreaded, isMe }) => {
+const DialogItem = ({ user, created_at, text, unreaded, isMe,  }) => {
     console.log(created_at)
     return (
         <div className={classNames('dialogs__item', { 'dialogs__item--online': user.isOnline })}>

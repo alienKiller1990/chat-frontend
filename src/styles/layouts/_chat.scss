@@ -1,8 +1,10 @@
 .chat {
+    // height: calc(100% - 20px);
+    height: 100%;
     display: flex;
     background: #fff;
     width: 1140px;
-    margin: 20px auto 0;
+    margin: 0 auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 
     &__sidebar {
@@ -10,9 +12,12 @@
         border-right: 1px solid rgb(231, 229, 229);
 
         &-header {
+            height: 57px;
             padding: 20px;
             display: flex;
             justify-content: space-between;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgb(216, 210, 210);
 
             &>div {
                 i {
@@ -24,16 +29,18 @@
 
         &-search {
             padding: 0 20px 20px 20px;
+            position: relative;
 
-            button {
-                border: none;
-                background-color: rgb(231, 229, 229);
-                height: 30px;
+            span {
+                position: absolute;
+                bottom: 27px;
+                right: 30px;
             }
 
             input {
+                padding-right: 30px;
                 display: block;
-                background-color: rgb(231, 229, 229);
+                background-color: rgb(240, 232, 232);
             }
         }
 
@@ -48,8 +55,9 @@
                     margin-bottom: 0;
                     transition: background-color .1s ease-in-out;
 
+                    &.active,
                     &:hover {
-                        background-color: rgb(211, 204, 204);
+                        background-color: #e4e4e4;
                     }
                 }
             }
@@ -60,7 +68,54 @@
 
     &__dialog {
         flex: 1;
-        // background-color: green;
+
+        &-header {
+            height: 57px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgb(216, 210, 210);
+            margin-bottom: 20px;
+
+            &-center {
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            &-username {
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+            &-status{
+                display: inline-block;
+                color: #ccc;
+                position: relative;
+
+                &--online {
+                    &::before{
+                        background-color: rgb(134, 223, 126);
+                    }
+                }
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border-radius: 30px;
+                    background-color: #ccc;
+                }
+            }
+        }
+
+        &-messages {
+            padding: 0 20px;
+        }
     }
 }
 
