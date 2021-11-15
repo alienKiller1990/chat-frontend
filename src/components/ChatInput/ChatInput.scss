@@ -1,0 +1,26 @@
+.chat-input {
+    padding: 20px;
+    position: relative;
+
+
+    &__smile-btn,
+    &__actions {
+        position: absolute;
+        z-index: 1;
+    }
+
+    .ant-input {
+        border-color: #ccc;
+        padding: 0 30px;
+    }
+
+    &__smile-btn {
+        left: 27px;
+        top: 25px;
+    }
+
+    &__actions {
+        right: 25px;
+        bottom: 23px;
+    }
+}

@@ -89,39 +89,21 @@
                 font-weight: 600;
                 margin-bottom: 5px;
             }
-            &-status{
-                display: inline-block;
-                color: #ccc;
-                position: relative;
 
-                &--online {
-                    &::before{
-                        background-color: rgb(134, 223, 126);
-                    }
-                }
-                &::before{
-                    position: absolute;
-                    content: '';
-                    width: 6px;
-                    height: 6px;
-                    left: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    border-radius: 30px;
-                    background-color: #ccc;
-                }
+            .anticon {
+                margin-right: 10px;
             }
         }
 
         &-messages {
             padding: 0 20px;
+            height: calc(100% - 144px);
+            overflow: auto;
         }
     }
 }
 
-.ant-input {
-    border: none;
-}
+
 
 .ant-input-search>.ant-input-group>.ant-input-group-addon:last-child {
     left: 0;
