@@ -7,21 +7,28 @@ import { SmileOutlined, CameraOutlined, AudioOutlined, SendOutlined } from '@ant
 import './ChatInput.scss';
 
 
-const ChatInput = props => (
-    <div className="chat-input">
-        <div className="chat-input__smile-btn">
-            <SmileOutlined />
-        </div>
+const ChatInput = props => {
+    const [value, setValue] = React.useState('')
+    return (
+        <div className="chat-input">
+            <div className="chat-input__smile-btn">
+                <SmileOutlined />
+            </div>
 
-        <Input size="large" onSearch={value => console.log(value)} placeholder="Введите текст сообщения" />
+            <Input
+                size="large"
+                onChange={e => setValue(e.target.value)}
+                placeholder="Введите текст сообщения" />
 
-        <div className="chat-input__actions">
-            <CameraOutlined />
-            <AudioOutlined />
-            <SendOutlined />
+            <div className="chat-input__actions">
+                <CameraOutlined />
+                {value ? <SendOutlined /> :<AudioOutlined />  }
+                
+                
+            </div>
         </div>
-    </div>
-)
+    )
+}
 
 
 ChatInput.propTypes = {
