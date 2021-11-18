@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dialogs, Message, Status, ChatInput } from 'components';
-import { Input } from 'antd';
+import { Input, Button } from 'antd';
 import { TeamOutlined, FormOutlined, EllipsisOutlined, SearchOutlined, SmileOutlined } from '@ant-design/icons';
 
 import './Home.scss';
@@ -22,7 +22,7 @@ const Home = () => {
                             </i>
                             <span>Список дилогов</span>
                         </div>
-                        <FormOutlined />
+                        <Button type="text" icon={<FormOutlined />} />
                     </div>
 
                     <div className="chat__sidebar-search">
@@ -120,6 +120,86 @@ const Home = () => {
                                 }
                             },
                             {
+                                "_id": "6189573b4f2747351bab44e9",
+                                "text": "Aliqua sunt nostrud nisi reprehenderit cupidatat commodo. Laboris pariatur cupidatat ea pariatur labore enim ullamco minim et magna. Ut commodo do dolor adipisicing consequat qui do excepteur. Exercitation amet et veniam non culpa consectetur excepteur officia nostrud elit minim nostrud. Ad eiusmod amet nostrud enim eiusmod amet incididunt cupidatat commodo exercitation et.",
+                                "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
+                                "user": {
+                                    "_id": "6189573b86f659e4cd4b5df3",
+                                    "fullname": "Byers Cotton",
+                                    "avatar": null
+                                }
+                            },
+                            {
+                                "_id": "6189573b4f2747351bab44e9",
+                                "text": "Aliqua sunt nostrud nisi reprehenderit cupidatat commodo. Laboris pariatur cupidatat ea pariatur labore enim ullamco minim et magna. Ut commodo do dolor adipisicing consequat qui do excepteur. Exercitation amet et veniam non culpa consectetur excepteur officia nostrud elit minim nostrud. Ad eiusmod amet nostrud enim eiusmod amet incididunt cupidatat commodo exercitation et.",
+                                "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
+                                "user": {
+                                    "_id": "6189573b86f659e4cd4b5df3",
+                                    "fullname": "Byers Cotton",
+                                    "avatar": null
+                                }
+                            },
+                            {
+                                "_id": "6189573b4f2747351bab44e9",
+                                "text": "Aliqua sunt nostrud nisi reprehenderit cupidatat commodo. Laboris pariatur cupidatat ea pariatur labore enim ullamco minim et magna. Ut commodo do dolor adipisicing consequat qui do excepteur. Exercitation amet et veniam non culpa consectetur excepteur officia nostrud elit minim nostrud. Ad eiusmod amet nostrud enim eiusmod amet incididunt cupidatat commodo exercitation et.",
+                                "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
+                                "user": {
+                                    "_id": "6189573b86f659e4cd4b5df3",
+                                    "fullname": "Byers Cotton",
+                                    "avatar": null
+                                }
+                            },
+                            {
+                                "_id": "6189573b4f2747351bab44e9",
+                                "text": "Aliqua sunt nostrud nisi reprehenderit cupidatat commodo. Laboris pariatur cupidatat ea pariatur labore enim ullamco minim et magna. Ut commodo do dolor adipisicing consequat qui do excepteur. Exercitation amet et veniam non culpa consectetur excepteur officia nostrud elit minim nostrud. Ad eiusmod amet nostrud enim eiusmod amet incididunt cupidatat commodo exercitation et.",
+                                "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
+                                "user": {
+                                    "_id": "6189573b86f659e4cd4b5df3",
+                                    "fullname": "Byers Cotton",
+                                    "avatar": null
+                                }
+                            },
+                            {
+                                "_id": "6189573b4f2747351bab44e9",
+                                "text": "Aliqua sunt nostrud nisi reprehenderit cupidatat commodo. Laboris pariatur cupidatat ea pariatur labore enim ullamco minim et magna. Ut commodo do dolor adipisicing consequat qui do excepteur. Exercitation amet et veniam non culpa consectetur excepteur officia nostrud elit minim nostrud. Ad eiusmod amet nostrud enim eiusmod amet incididunt cupidatat commodo exercitation et.",
+                                "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
+                                "user": {
+                                    "_id": "6189573b86f659e4cd4b5df3",
+                                    "fullname": "Byers Cotton",
+                                    "avatar": null
+                                }
+                            },
+                            {
+                                "_id": "6189573b4f2747351bab44e9",
+                                "text": "Aliqua sunt nostrud nisi reprehenderit cupidatat commodo. Laboris pariatur cupidatat ea pariatur labore enim ullamco minim et magna. Ut commodo do dolor adipisicing consequat qui do excepteur. Exercitation amet et veniam non culpa consectetur excepteur officia nostrud elit minim nostrud. Ad eiusmod amet nostrud enim eiusmod amet incididunt cupidatat commodo exercitation et.",
+                                "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
+                                "user": {
+                                    "_id": "6189573b86f659e4cd4b5df3",
+                                    "fullname": "Byers Cotton",
+                                    "avatar": null
+                                }
+                            },
+                            {
+                                "_id": "6189573b4f2747351bab44e9",
+                                "text": "Aliqua sunt nostrud nisi reprehenderit cupidatat commodo. Laboris pariatur cupidatat ea pariatur labore enim ullamco minim et magna. Ut commodo do dolor adipisicing consequat qui do excepteur. Exercitation amet et veniam non culpa consectetur excepteur officia nostrud elit minim nostrud. Ad eiusmod amet nostrud enim eiusmod amet incididunt cupidatat commodo exercitation et.",
+                                "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
+                                "user": {
+                                    "_id": "6189573b86f659e4cd4b5df3",
+                                    "fullname": "Byers Cotton",
+                                    "avatar": null
+                                }
+                            },
+                            {
+                                "_id": "6189573b4f2747351bab44e9",
+                                "text": "Aliqua sunt nostrud nisi reprehenderit cupidatat commodo. Laboris pariatur cupidatat ea pariatur labore enim ullamco minim et magna. Ut commodo do dolor adipisicing consequat qui do excepteur. Exercitation amet et veniam non culpa consectetur excepteur officia nostrud elit minim nostrud. Ad eiusmod amet nostrud enim eiusmod amet incididunt cupidatat commodo exercitation et.",
+                                "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
+                                "user": {
+                                    "_id": "6189573b86f659e4cd4b5df3",
+                                    "fullname": "Byers Cotton",
+                                    "avatar": null
+                                }
+                            },
+                            {
                                 "_id": "6189573bf0f6c1ce82dbe925",
                                 "text": "Do sunt officia enim qui. Minim labore incididunt ad et reprehenderit nulla pariatur laborum duis fugiat non enim deserunt ea. Commodo ex sit consequat ipsum minim aliquip minim Lorem cillum cillum velit. Proident consequat ad qui do. Fugiat aliqua commodo deserunt exercitation voluptate laboris eiusmod ex dolor est nostrud do excepteur.",
                                 "created_at": "Thu Jul 30 2009 10:54:20 GMT+0400 (Москва, летнее время)",
@@ -151,11 +231,10 @@ const Home = () => {
                         <div className="chat__dialog-header-center">
                             <b className="chat__dialog-header-username">Fred Derst</b>
                             <div className="chat__dialog-header-status">
-                                <Status online/>
+                                <Status online />
                             </div>
                         </div>
-
-                        <EllipsisOutlined />
+                        <Button type="text" icon={<EllipsisOutlined />} />
                     </div>
                     <div className="chat__dialog-messages">
                         <Message
@@ -236,7 +315,7 @@ const Home = () => {
 
                     </div>
                     <div className="chat__dialog-input">
-                        <ChatInput/>
+                        <ChatInput />
                     </div>
 
                 </div>

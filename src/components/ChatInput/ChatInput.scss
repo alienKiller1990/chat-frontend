@@ -6,19 +6,19 @@
     align-items: center;
 
     .anticon {
-        font-size: 20px;
-        opacity: 0.5;
-        cursor: pointer;
-        transition: opacity .3s ease-in-out;
-
-        &:hover {
-            opacity: 1;
-        }
+        
     }
+
+    .ant-input:focus,
+    .ant-input:hover {
+        box-shadow: none;
+        border-color: rgb(161, 156, 156);
+    }
+
 
     .ant-input {
         border-color: #ccc;
-        padding: 0 30px;
+        padding: 5px 30px;
     }
 
     &__smile-btn {

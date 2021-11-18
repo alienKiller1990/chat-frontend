@@ -3,16 +3,36 @@
 
 @import 'layouts/chat';
 
-body{
+body {
     box-sizing: border-box;
     background-color: rgb(219, 209, 209);
 }
 
-body, html, #root, .wrapper{
+body,
+html,
+#root,
+.wrapper {
     height: 100%;
     color: #202020
 }
 
 * {
     outline: none;
+}
+
+.anticon {
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.ant-btn:hover {
+    .anticon {
+        opacity: 1;
+        transition: opacity .3s ease-in-out;
+    }
+}
+
+.ant-btn-text:hover{
+    background: transparent;
 }
