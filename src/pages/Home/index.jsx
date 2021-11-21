@@ -1,15 +1,14 @@
 import React from 'react';
-import { Dialogs, Message, Status, ChatInput } from 'components';
-import { Input, Button } from 'antd';
-import { TeamOutlined, FormOutlined, EllipsisOutlined, SearchOutlined, SmileOutlined } from '@ant-design/icons';
+import { Message, Status, ChatInput } from 'components';
+import { Dialogs } from 'containers';
+import { Button } from 'antd';
+import { TeamOutlined, FormOutlined, EllipsisOutlined } from '@ant-design/icons';
 
 import './Home.scss';
 
 
 const Home = () => {
-    const change = (e) => {
-        console.log(e.target.value)
-    }
+
     return (
         <section className="home">
             <div className="chat">
@@ -25,10 +24,7 @@ const Home = () => {
                         <Button type="text" icon={<FormOutlined />} />
                     </div>
 
-                    <div className="chat__sidebar-search">
-                        <Input onFocus={change} placeholder="Поиск среди контактов" />
-                        {<SearchOutlined />}
-                    </div>
+
                     <div className="chat__sidebar-dialogs">
                         <Dialogs items={[
 
@@ -41,7 +37,7 @@ const Home = () => {
                                 "user": {
                                     "_id": "61D97542B4E0E41A1EAAD42823F0B48B",
                                     "fullname": "Vargas Blanchard",
-                                    "avatar": null
+                                    "avatar": "https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
                                 }
                             },
                             {
@@ -52,7 +48,7 @@ const Home = () => {
                                 "user": {
                                     "_id": "287CBAA3D2391DF674C55B8594AB8D00",
                                     "fullname": "Vang Hayes",
-                                    "avatar": null
+                                    "avatar": "https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
                                 }
                             },
                             {
@@ -62,7 +58,7 @@ const Home = () => {
                                 "user": {
                                     "_id": "4C15E6F54403D1A142C92BE657F4980E",
                                     "fullname": "Katy Spencer",
-                                    "avatar": null
+                                    "avatar": "https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
                                 }
                             },
                             {
@@ -72,7 +68,7 @@ const Home = () => {
                                 "user": {
                                     "_id": "E2F0390E883CF004E8E7FC00581F45C0",
                                     "fullname": "Branch Ortiz",
-                                    "avatar": null
+                                    "avatar": "https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
                                 }
                             },
 
@@ -85,7 +81,7 @@ const Home = () => {
                                 "user": {
                                     "_id": "3EB3F0DC8B90552606855CF61F511141",
                                     "fullname": "Rogers Owens",
-                                    "avatar": null
+                                    "avatar": "https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
                                 }
                             },
 
@@ -96,7 +92,7 @@ const Home = () => {
                                 "user": {
                                     "_id": "6189573ba2a24b9aee2d8941",
                                     "fullname": "Ursula Jefferson",
-                                    "avatar": null
+                                    "avatar": "https://yt3.ggpht.com/I_0bAV91DK1KNoCyYUooOFlaRTyGdnKGWYs9hEfbayFsoKhbGl9WUrg9MGsGdDw6i2qCoCB0pQ=s88-c-k-c0x00ffffff-no-rj-mo"
                                 }
                             },
                             {
@@ -115,7 +111,7 @@ const Home = () => {
                                 "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
                                 "user": {
                                     "_id": "6189573b86f659e4cd4b5df3",
-                                    "fullname": "Byers Cotton",
+                                    "fullname": "Anna Cotton",
                                     "avatar": null
                                 }
                             },
@@ -125,7 +121,7 @@ const Home = () => {
                                 "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
                                 "user": {
                                     "_id": "6189573b86f659e4cd4b5df3",
-                                    "fullname": "Byers Cotton",
+                                    "fullname": "Pol Cotton",
                                     "avatar": null
                                 }
                             },
@@ -135,7 +131,7 @@ const Home = () => {
                                 "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
                                 "user": {
                                     "_id": "6189573b86f659e4cd4b5df3",
-                                    "fullname": "Byers Cotton",
+                                    "fullname": "John Cotton",
                                     "avatar": null
                                 }
                             },
@@ -145,7 +141,7 @@ const Home = () => {
                                 "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
                                 "user": {
                                     "_id": "6189573b86f659e4cd4b5df3",
-                                    "fullname": "Byers Cotton",
+                                    "fullname": "Tom Cotton",
                                     "avatar": null
                                 }
                             },
@@ -155,7 +151,7 @@ const Home = () => {
                                 "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
                                 "user": {
                                     "_id": "6189573b86f659e4cd4b5df3",
-                                    "fullname": "Byers Cotton",
+                                    "fullname": "Riahna Cotton",
                                     "avatar": null
                                 }
                             },
@@ -165,7 +161,7 @@ const Home = () => {
                                 "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
                                 "user": {
                                     "_id": "6189573b86f659e4cd4b5df3",
-                                    "fullname": "Byers Cotton",
+                                    "fullname": "Bob Cotton",
                                     "avatar": null
                                 }
                             },
@@ -175,7 +171,7 @@ const Home = () => {
                                 "created_at": "Thu Sep 10 1998 20:33:53 GMT+0400 (Москва, летнее время)",
                                 "user": {
                                     "_id": "6189573b86f659e4cd4b5df3",
-                                    "fullname": "Byers Cotton",
+                                    "fullname": "xxx Cotton",
                                     "avatar": null
                                 }
                             },
@@ -239,7 +235,7 @@ const Home = () => {
                     <div className="chat__dialog-messages">
                         <Message
                             avatar="https://yt3.ggpht.com/ytc/AKedOLQlCDlun57Qr6u6DY-yGM3H7vfXsAo6jgXC7Hvt=s176-c-k-c0x00ffffff-no-rj-mo"
-                            date={new Date().getTime()}
+                            date={new Date()}
                             audio="https://notificationsounds.com/storage/sounds/file-sounds-1150-pristine.mp3"
 
                         />

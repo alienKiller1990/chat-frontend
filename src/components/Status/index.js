@@ -13,7 +13,7 @@ const Status = ({online}) => {
 }
 
 Status.propTypes = {
-    online: PropTypes.string,
+    online: PropTypes.bool,
 }
 
 export default Status

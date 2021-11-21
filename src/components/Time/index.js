@@ -8,7 +8,7 @@ const Time = ({ date }) => (
 
 
 Time.propTypes = {
-    date: PropTypes.number,
+    date: PropTypes.object,
 }
 
 

@@ -28,22 +28,7 @@
             }
         }
 
-        &-search {
-            padding: 0 20px 20px 20px;
-            position: relative;
 
-            span {
-                position: absolute;
-                bottom: 27px;
-                right: 30px;
-            }
-
-            input {
-                padding-right: 30px;
-                display: block;
-                background-color: rgb(240, 232, 232);
-            }
-        }
 
         &-dialogs {
             height: calc(100% - 129px);

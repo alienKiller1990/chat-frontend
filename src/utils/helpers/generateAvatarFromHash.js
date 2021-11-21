@@ -7,14 +7,11 @@ const getSumofNumber = str => {
     return [...str].reduce((accum, item) => accum + item.charCodeAt(),0)
 }
 
-
-
-
 export default (hash) => {
     const [r, g, b] = hash
-        .substr(0, 6)
-        .match(/../g)
-        .map(item => getSumofNumber(item));
+        .substr(0, 9)
+        .match(/.../g)
+        .map(item => getSumofNumber(item) > 250 ? getSumofNumber(item) / 2 : getSumofNumber(item)  );
         console.log(r, g, b)
     return {
         color:
@@ -22,7 +19,7 @@ export default (hash) => {
                 .toHexString(),
         colorLighten:
             tinycolor({ r, g, b })
-                .lighten(30)
+                .darken(20)
                 .toHexString()
 
     };

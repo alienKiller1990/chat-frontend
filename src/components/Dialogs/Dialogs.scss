@@ -1,0 +1,118 @@
+.dialogs {
+
+    &__search {
+        // padding: 0 20px 20px 20px;
+        margin-bottom: 20px;
+        position: relative;
+
+        span {
+            position: absolute;
+            bottom: 27px;
+            right: 30px;
+        }
+
+        input {
+            padding-right: 30px;
+            display: block;
+            background-color: #f5f2f2;
+        }
+    }
+
+    &__item {
+        margin-bottom: 20px;
+        display: flex;
+        $item: &;
+
+        &-avatar {
+            position: relative;
+            flex: 0 0 40px;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        &--online {
+            #{$item}-avatar {
+                &:before {
+                    content: "";
+                    background-color: rgb(50, 124, 21);
+                    border-radius: 50%;
+                    width: 12px;
+                    height: 12px;
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    border: 2px solid #fff;
+                }
+            }
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+
+            &-top {
+                display: flex;
+
+                b {
+                    font-weight: 600;
+                    flex: 1;
+                    margin-bottom: 6px;
+                }
+
+                span {
+                    opacity: 0.5;
+                }
+            }
+
+            &-bottom {
+                position: relative;
+
+                p {
+                    padding-right: 15px;
+                    opacity: 0.5;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 240px;
+                }
+
+                &-count {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    background: rgb(93, 184, 90);
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 11px;
+                    min-width: 18px;
+                    height: 18px;
+                    border-radius: 30px;
+                    text-align: center;
+                    line-height: 13px;
+                    display: inline-block;
+                    padding: 3px;
+                    // box-shadow:  -5px 0 0 5px  rgb(255, 255, 255)
+                }
+
+                .message__img {
+                    position: absolute;
+                    bottom: 0;
+                    left: auto;
+                    right: 0;
+                    margin: 0;
+                }
+            }
+
+        }
+    }
+}
