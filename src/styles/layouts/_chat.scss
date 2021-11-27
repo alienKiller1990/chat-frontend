@@ -33,6 +33,7 @@
         &-dialogs {
             height: calc(100% - 129px);
             overflow: auto;
+            position: relative;
 
             .dialogs {
                 padding: 0 20px;
@@ -88,6 +89,14 @@
             padding: 0 20px;
             height: calc(100% - 174px);
             overflow: auto;
+
+            .ant-empty {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(50%, -50%);
+
+            }
         }
     }
 }

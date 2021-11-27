@@ -18,7 +18,7 @@ const getMessageTime = created_at => {
 }
 
 
-const DialogItem = ({ user, created_at, text, unreaded, isMe,  }) => {
+const DialogItem = ({ user, createdAt, text, unreaded, isMe,  }) => {
     return (
         <div className={classNames('dialogs__item', { 'dialogs__item--online': user.isOnline })}>
             <div className="dialogs__item-avatar">
@@ -28,7 +28,7 @@ const DialogItem = ({ user, created_at, text, unreaded, isMe,  }) => {
                 <div className="dialogs__item-info-top">
                     <b>{user.fullname}</b>
                     <span>
-                        {getMessageTime(created_at)}
+                        {getMessageTime(createdAt)}
                     </span>
                 </div>
                 <div className="dialogs__item-info-bottom">

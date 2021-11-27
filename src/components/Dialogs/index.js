@@ -1,7 +1,7 @@
 import React from 'react';
 import { orderBy } from 'lodash-es';
 import { DialogItem } from '../';
-import { Input } from 'antd';
+import { Input, Empty  } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 
 
@@ -20,11 +20,9 @@ const Dialogs = ({ items, userId, onSearch, inputValue }) => {
                 />
                 {<SearchOutlined />}
             </div>
-            {
-                orderBy(items, ['created_at'], ['desc']).map((item, index) => (
-                    <DialogItem key={`${item._id}_${index}`} isMe={item.user_id === userId} {...item} />)
-                )
-            }
+            {items.length ? orderBy(items, ['created_at'], ['desc']).map((item, index) => (
+                <DialogItem key={`${item._id}_${index}`} isMe={item.user_id === userId} {...item} />)
+            ) : <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description="ничего не найдено"/>}
         </div >
     )
 }

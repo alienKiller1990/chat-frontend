@@ -3,7 +3,7 @@ import React from 'react';
 import { Dialogs as BaseDialogs } from 'components'
 
 const Dialogs = ({ items, userId }) => {
-
+    console.log(userId)
     const [inputValue, setValue] = React.useState('');
     const [filtred, setFiltredItems] = React.useState(Array.from(items));
 
