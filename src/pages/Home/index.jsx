@@ -28,7 +28,7 @@ const Home = () => {
 
 
                     <div className="chat__sidebar-dialogs">
-                        <Dialogs userId={0} items={dialogsJson} />
+                        <Dialogs userId={0} items={dialogsJson.dialogs} />
                     </div>
 
                 </div>
